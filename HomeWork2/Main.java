@@ -15,9 +15,11 @@ public class Main {
             switch (s) {
                 case 1:
                     m1.Add();
+                    m1.Update();
                     break;
                 case 2:
                     m1.Delete();
+                    m1.Update();
                     break;
                 case 3:
                     m1.countPeople();

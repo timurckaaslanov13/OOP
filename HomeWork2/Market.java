@@ -17,4 +17,14 @@ public class Market implements QueueBehaviour, MarketBehaviour{
         count = count - 1;
         System.out.println("Очередь покинул 1 человек");;
     }
+    public void Update(){
+        if (count == 0){
+            countPeople();
+            CloseShop();
+        }
+        else{
+            countPeople();
+            OpenShop();
+        }
+    }
 }
