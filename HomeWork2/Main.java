@@ -5,9 +5,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         Market m1 = new Market();
         m1.OpenShop();
-        System.out.println("Меню:" + "\n" + "1. Добавить людей в очередь(сказать касса свободна)" + "\n" + "2. Обслужить клиента(удалить из очереди)" + "\n" + "3. Узнать количество людей в очереди" + "\n"
-                + "0. Выход");
-        int s = sc.nextInt();
+        int s = 1;
         while (s != 0) {
             System.out.println("Меню:" + "\n" + "1. Добавить людей в очередь(сказать касса свободна)" + "\n" + "2. Обслужить клиента(удалить из очереди)" + "\n" + "3. Узнать количество людей в очереди" + "\n"
                     + "0. Выход");
@@ -15,11 +13,9 @@ public class Main {
             switch (s) {
                 case 1:
                     m1.Add();
-                    m1.Update();
                     break;
                 case 2:
                     m1.Delete();
-                    m1.Update();
                     break;
                 case 3:
                     m1.countPeople();
