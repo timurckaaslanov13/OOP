@@ -1,4 +1,4 @@
-public interface QueueBehaviour {
+public interface QueueBehavior {
     public void countPeople();
     default void CloseShop(){
         System.out.println("Мазагин закрыт!");

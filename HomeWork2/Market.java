@@ -1,6 +1,9 @@
-public class Market implements QueueBehaviour, MarketBehaviour{
+import java.util.Timer;
+
+public class Market implements QueueBehavior, MarketBehavior{
     private int count = 0;
     private boolean isOpen = false;
+    private double time = 0.0;
     @Override
     public void countPeople() {
         System.out.printf("В очереди %d людей\n", count);
