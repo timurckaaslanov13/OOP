@@ -10,6 +10,16 @@ public class Market implements QueueBehavior, MarketBehavior{
     }
 
     @Override
+    public void CloseShop() {
+        System.out.println("Магазин закрыт!");
+    }
+
+    @Override
+    public void OpenShop() {
+        System.out.println("Магазин открыт!");
+    }
+
+    @Override
     public void Add() {
         count = count + 1;
         System.out.println("В очередь добавился один человек");
@@ -22,8 +32,8 @@ public class Market implements QueueBehavior, MarketBehavior{
         System.out.println("Очередь покинул 1 человек");
         updateShopState();
     }
-    public void updateShopState(){
-        if (count == 0){
+    public void updateShopState(){ // Класс Market выполняет одну поставленную задачу, а конкретно обновляем информацию о магазине.
+        if (count == 0){ // Соблюдается принцип единственной ответственности.
             countPeople();
             CloseShop();
         }

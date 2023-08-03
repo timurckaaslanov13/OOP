@@ -1,11 +1,11 @@
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class Worker implements Iterator<String>, Comparable<Worker>{
-    public String firstname;
-    public String surname;
-    public int age;
-    public int salary;
+public class Worker implements Iterator<String>, Comparable<Worker>{// Данный класс закрыт для модификации начальных полей,
+    private String firstname;
+    private String surname;
+    private int age;
+    private int salary;
     public Worker(String firstname, String surname, int age, int salary){
         this.firstname = firstname;
         this.surname = surname;
@@ -14,7 +14,7 @@ public class Worker implements Iterator<String>, Comparable<Worker>{
         this.ind = 0;
     }
 
-    int ind;
+    private int ind;
     @Override
     public boolean hasNext() {
         return ind++ < 4;
